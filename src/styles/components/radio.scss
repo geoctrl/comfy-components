@@ -1,0 +1,34 @@
+.comfy-radio {
+  display: inline-flex;
+  align-items: center;
+  padding-right: 1.4rem;
+  user-select: none;
+  vertical-align: middle;
+
+  &::before {
+    display: inline-block;
+    content: '';
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 1.4rem;
+    border: solid .2rem $color-grey-300;
+    margin-right: .6rem;
+    transition: border 200ms ease;
+  }
+
+  &.comfy-radio--checked::before {
+    border: solid .5rem $color-primary;
+  }
+
+  &.comfy-radio--block {
+    display: flex;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+}

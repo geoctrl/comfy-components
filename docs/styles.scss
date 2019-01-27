@@ -1,0 +1,17 @@
+@import "../src/styles/variables";
+
+$color-primary: #ff6666;
+@import "../src/styles/index";
+
+
+body {
+  --color-primary: #FF6666;
+  --font-family: 'Chewy';
+}
+
+code {
+  background-color: $color-grey-500;
+  border-radius: .3rem;
+  padding: .2rem .4rem;
+  color: #fff;
+}
