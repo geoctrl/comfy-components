@@ -6,7 +6,7 @@
   padding: 0 1.2rem;
   line-height: 1;
   background: transparent;
-  transition: background 200ms ease;
+  transition: background $base-transition-duration ease;
   font-weight: 500;
 
   &::after {
@@ -20,7 +20,7 @@
     border: solid .1rem;
     background-color: transparent;
     box-shadow: none;
-    transition: background-color 200ms ease, box-shadow 200ms ease;
+    transition: background-color $base-transition-duration ease, box-shadow $base-transition-duration ease;
   }
 
   &::before {
@@ -32,7 +32,7 @@
     right: 0;
     bottom: 0;
     box-shadow: none;
-    transition: box-shadow 200ms ease;
+    transition: box-shadow $base-transition-duration ease;
   }
 
   &:focus::before {
