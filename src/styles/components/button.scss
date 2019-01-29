@@ -36,7 +36,7 @@
   }
 
   &:focus::before {
-    box-shadow: 0 0 0 .3rem rgba($color-primary, .5);
+    @include focus-box-shadow();
   }
 
   &:focus,

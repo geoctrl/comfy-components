@@ -1,30 +1,30 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { a } from 'kremling';
 import { bool, func, string } from 'prop-types';
 
 import { Icon } from './icon.component';
 
 export function Checkbox(props) {
+  const [isFocused, updateIsFocused] = useState(false);
   const { onChange, value, name, children, checked, block } = props;
-  const inputEl = useRef(null);
 
   return (
   <label
     className={
       a('comfy-checkbox')
+        .m('comfy-checkbox--focus', isFocused)
         .m('comfy-checkbox--checked', checked)
         .m('comfy-checkbox--block', block)
     }
   >
-    <span className="comfy-checkbox__box">
-      <Icon name="check" size={14} />
-    </span>
+    <span className="comfy-checkbox__box" />
     <input
-      ref={inputEl}
       type="checkbox"
       name={name}
       onChange={onChange}
       value={value}
+      onFocus={() => updateIsFocused(true)}
+      onBlur={() => updateIsFocused(false)}
     />
     {children}
   </label>

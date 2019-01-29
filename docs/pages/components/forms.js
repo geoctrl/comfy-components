@@ -40,34 +40,6 @@ export function Forms() {
           Fred
         </Radio>
 
-        <h3>Block</h3>
-        <Radio
-          onChange={(e) => setName1(e.target.value)}
-          value="Jim"
-          checked={name1 === 'Jim'}
-          name="name-2"
-          block
-        >
-          Jim
-        </Radio>
-        <Radio
-          onChange={(e) => setName1(e.target.value)}
-          value="Bobby"
-          checked={name1 === 'Bobby'}
-          name="name-2"
-          block
-        >
-          Bobby
-        </Radio>
-        <Radio
-          onChange={(e) => setName1(e.target.value)}
-          value="Fred"
-          checked={name1 === 'Fred'}
-          name="name-2"
-          block
-        >
-          Fred
-        </Radio>
         <h1>Checkbox</h1>
         <h3>Inline</h3>
         <Checkbox
@@ -113,7 +85,7 @@ export function Forms() {
         <h1>Input</h1>
         <h3>Single</h3>
         <Input />
-        <Button>Test</Button>
+        <Button actionType="primary">Test</Button>
       </div>
     </Scoped>
   );

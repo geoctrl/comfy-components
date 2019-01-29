@@ -22,4 +22,6 @@ $base-font-weight: 400 !default;
 $base-line-height: 1.4 !default;
 $base-border-radius: 0.4rem !default;
 $base-transition-duration: 200ms;
-$base-focus-box-shadow: 0 0 0 .3rem rgba($color-primary, .5);
+@mixin focus-box-shadow() {
+  box-shadow: 0 0 0 .3rem rgba($color-primary, .5);
+}
