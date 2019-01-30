@@ -1,11 +1,11 @@
 @import "../src/styles/variables";
 
-//$color-primary: #ff6666;
 @import "../src/styles/index";
 
 
 body {
-  --color-primary: #FF6666;
+  --color-theme: #E5876A;
+  --color-primary: #45ADDB;
   --font-family: 'Chewy';
 }
 

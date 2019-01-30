@@ -24,6 +24,7 @@
     "kremling": "^1.0.5",
     "node-sass": "^4.11.0",
     "style-loader": "^0.23.1",
+    "svg-inline-loader": "^0.8.0",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",

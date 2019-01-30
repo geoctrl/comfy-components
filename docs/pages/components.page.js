@@ -7,13 +7,12 @@ import { Forms } from "./components/forms";
 
 export function ComponentsPage(props) {
   const baseUrl = props.match.url;
-  console.log(`${baseUrl}/buttons`)
   return (
     <Scoped css={css}>
       <div className="comps">
-        {/*<div className="comps__sidebar">*/}
-          {/*Introduction*/}
-        {/*</div>*/}
+        <div className="comps__sidebar">
+          Introduction
+        </div>
         <Route path={`${baseUrl}/buttons`} component={Buttons} />
         <Route path={`${baseUrl}/forms`} component={Forms} />
       </div>

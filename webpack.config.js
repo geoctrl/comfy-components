@@ -29,16 +29,9 @@ config.module = {
       use: ['style-loader', 'css-loader', 'fast-sass-loader'],
     },
     {
-      test: /\.(png)$/i,
+      test: /\.svg$/,
       exclude: /node_modules/,
-      use: [
-        {
-          loader: 'url-loader',
-          options: {
-            limit: 500000,
-          },
-        },
-      ],
+      loader: 'svg-inline-loader',
     },
   ],
 };
