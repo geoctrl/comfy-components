@@ -27,7 +27,7 @@ const css = `
   & .header {
     height: 7rem;
     padding: 0 3.2rem;
-    background-color: var(--color-theme);
+    background-color: var(--color-danger);
   }
   
   & .header__brand {

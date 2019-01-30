@@ -1,11 +1,14 @@
 @import "../src/styles/variables";
-
 @import "../src/styles/index";
 
 
 body {
-  --color-theme: #E5876A;
-  --color-primary: #45ADDB;
+  --color-primary: #{$color-primary};
+  --color-success: #{$color-success};
+  --color-warning: #{$color-warning};
+  --color-danger: #{$color-danger};
+  --color-info: #{$color-info};
+  --color-dark: #{$color-dark};
   --font-family: 'Chewy';
 }
 
