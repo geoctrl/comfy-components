@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { a } from 'kremling';
+import { always } from 'kremling/src/classname-helpers';
 import { bool, func, string } from 'prop-types';
-
-import { Icon } from './icon.component';
 
 export function Checkbox(props) {
   const [isFocused, updateIsFocused] = useState(false);
@@ -11,7 +9,7 @@ export function Checkbox(props) {
   return (
   <label
     className={
-      a('comfy-checkbox')
+      always('comfy-checkbox')
         .m('comfy-checkbox--focus', isFocused)
         .m('comfy-checkbox--checked', checked)
         .m('comfy-checkbox--block', block)

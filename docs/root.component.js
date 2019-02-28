@@ -9,6 +9,7 @@ export function Root() {
   return (
     <BrowserRouter>
       <div>
+        {/*<Header />*/}
         <Route path="/" exact component={HomePage} />
         <Route path="/components" component={ComponentsPage} />
       </div>
