@@ -1,4 +1,4 @@
-.comfy-btn {
+.cf-btn {
   position: relative;
   height: 3rem;
   border: none;
@@ -58,7 +58,7 @@
 /**
  * PRIMARY
  */
-.comfy-btn__primary {
+.cf-btn__primary {
   background-color: $color-primary;
   color: #fff;
 
@@ -74,7 +74,7 @@
 /**
  * SECONDARY
  */
-.comfy-btn__secondary {
+.cf-btn__secondary {
   background-color: $color-grey-25;
   color: $color-grey-500;
 
@@ -94,7 +94,7 @@
 /**
  * FLAT
  */
-.comfy-btn__flat {
+.cf-btn__flat {
   background-color: transparent;
   color: $color-grey-500;
 

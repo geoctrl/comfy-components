@@ -1,0 +1,43 @@
+$list-padding: .8rem;
+
+.cf-list {
+  padding: $list-padding;
+
+  a, button {
+    display: block;
+    width: 100%;
+    border: none;
+    background: none;
+    text-align: left;
+    padding: .4rem 1rem;
+    cursor: pointer;
+    color: $color-grey-900;
+    text-decoration: none;
+    box-shadow: none;
+    transition: box-shadow $base-transition-duration ease;
+    border-radius: $base-border-radius;
+
+    &:hover {
+      background-color: $color-grey-50;
+    }
+
+    &:focus, &:active {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:focus {
+      @include focus-box-shadow();
+    }
+
+  }
+
+}
+
+.cf-list__divider {
+  border-bottom: solid .1rem $color-grey-100;
+  padding-top: $list-padding;
+  margin-bottom: $list-padding;
+  margin-left: -$list-padding;
+  margin-right: -$list-padding;
+}

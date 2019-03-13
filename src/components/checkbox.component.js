@@ -9,13 +9,13 @@ export function Checkbox(props) {
   return (
   <label
     className={
-      always('comfy-checkbox')
-        .m('comfy-checkbox--focus', isFocused)
-        .m('comfy-checkbox--checked', checked)
-        .m('comfy-checkbox--block', block)
+      always('cf-checkbox')
+        .m('cf-checkbox--focus', isFocused)
+        .m('cf-checkbox--checked', checked)
+        .m('cf-checkbox--block', block)
     }
   >
-    <span className="comfy-checkbox__box" />
+    <span className="cf-checkbox__box" />
     <input
       type="checkbox"
       name={name}

@@ -12,13 +12,13 @@ export function Input() {
   return (
   <div
     className={
-      a('comfy-input')
-        .m('comfy-input--focus', isFocused)
+      a('cf-input')
+        .m('cf-input--focus', isFocused)
     }
   >
     <input
       type="text"
-      className="comfy-input__input"
+      className="cf-input__input"
       onFocus={onFocus}
       onBlur={onBlur}
     />

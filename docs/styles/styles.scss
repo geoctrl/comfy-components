@@ -1,5 +1,5 @@
-@import "../src/styles/variables";
-@import "../src/styles/index";
+@import "../../src/styles/variables";
+@import "../../src/styles/index";
 
 
 body {
@@ -13,8 +13,16 @@ body {
 }
 
 code {
-  background-color: $color-grey-500;
+  background-color: $color-danger;
   border-radius: .3rem;
   padding: .2rem .4rem;
   color: #fff;
+  font-weight: 400;
+}
+
+.comfy-title {
+  font-family: 'Chewy', sans-serif;
+  color: $color-danger;
+  font-size: 4rem;
+  letter-spacing: .15rem;
 }

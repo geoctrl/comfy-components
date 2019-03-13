@@ -1,13 +1,13 @@
-.comfy-input {
+.cf-input {
   display: inline-block;
   border-radius: $base-border-radius;
   width: 20rem;
 
-  &.comfy-input--focus {
+  &.cf-input--focus {
   }
 }
 
-.comfy-input__input {
+.cf-input__input {
   height: 3rem;
   line-height: 3rem;
   border-radius: $base-border-radius;

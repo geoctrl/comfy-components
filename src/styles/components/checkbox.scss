@@ -1,13 +1,13 @@
 $checkbox-size: $base-font-size;
 
-.comfy-checkbox {
+.cf-checkbox {
   display: inline-flex;
   align-items: center;
   padding-right: 1.6rem;
   user-select: none;
   vertical-align: middle;
 
-  .comfy-checkbox__box {
+  .cf-checkbox__box {
     display: inline-block;
     height: $checkbox-size;
     width: $checkbox-size;
@@ -30,24 +30,24 @@ $checkbox-size: $base-font-size;
     }
   }
 
-  &.comfy-checkbox--focus .comfy-checkbox__box::before {
+  &.cf-checkbox--focus .cf-checkbox__box::before {
     border-color: $color-grey-500;
   }
 
-  &.comfy-checkbox--checked .comfy-checkbox__box {
+  &.cf-checkbox--checked .cf-checkbox__box {
     &::before {
       border-width: .5rem;
       border-color: $color-primary;
     }
   }
 
-  &.comfy-checkbox--focus {
-    .comfy-checkbox__box {
+  &.cf-checkbox--focus {
+    .cf-checkbox__box {
       @include focus-box-shadow();
     }
   }
 
-  &.comfy-checkbox--block {
+  &.cf-checkbox--block {
     display: flex;
   }
 

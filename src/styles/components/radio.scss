@@ -1,4 +1,4 @@
-.comfy-radio {
+.cf-radio {
   display: inline-flex;
   align-items: center;
   padding-right: 1.4rem;
@@ -17,15 +17,15 @@
     transition: border $base-transition-duration ease, box-shadow $base-transition-duration ease;
   }
 
-  &.comfy-radio--focus::before {
+  &.cf-radio--focus::before {
     @include focus-box-shadow;
   }
 
-  &.comfy-radio--checked::before {
+  &.cf-radio--checked::before {
     border: solid .5rem $color-primary;
   }
 
-  &.comfy-radio--block {
+  &.cf-radio--block {
     display: flex;
   }
 

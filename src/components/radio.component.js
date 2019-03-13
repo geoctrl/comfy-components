@@ -9,10 +9,10 @@ export function Radio(props) {
   return (
   <label
     className={
-      a('comfy-radio')
-        .m('comfy-radio--focus', isFocused)
-        .m('comfy-radio--checked', checked)
-        .m('comfy-radio--block', block)
+      a('cf-radio')
+        .m('cf-radio--focus', isFocused)
+        .m('cf-radio--checked', checked)
+        .m('cf-radio--block', block)
     }
   >
     <input
