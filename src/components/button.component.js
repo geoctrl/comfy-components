@@ -1,11 +1,15 @@
 import React from 'react';
-import { oneOf } from 'prop-types';
+import { a } from 'kremling';
+import { oneOf, bool } from 'prop-types';
 
 export function Button(props) {
-  const { actionType, className, ...buttonProps } = props;
+  const { actionType, className = '', small, ...buttonProps } = props;
   return (
     <button
-      className={`cf-btn cf-btn__${actionType} ${className}`}
+      className={
+        a(`cf-btn cf-btn__${actionType} ${className}`)
+          .m('cf-btn--small', small)
+      }
       {...buttonProps}
     >
       {props.children}
@@ -15,4 +19,5 @@ export function Button(props) {
 
 Button.propTypes = {
   actionType: oneOf(['primary', 'secondary']),
+  small: bool,
 };

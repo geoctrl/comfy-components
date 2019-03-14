@@ -14,7 +14,7 @@ body {
 
 code {
   background-color: $color-danger;
-  border-radius: .3rem;
+  border-radius: $base-border-radius;
   padding: .2rem .4rem;
   color: #fff;
   font-weight: 400;

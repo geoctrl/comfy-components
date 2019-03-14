@@ -14,7 +14,7 @@ export function Pre(props) {
   );
   return (
     <pre
-      className="comfy-pre bs-1"
+      className="comfy-pre"
       {...scope}
       ref={preEl}
       dangerouslySetInnerHTML={{ __html: content }}
@@ -28,7 +28,6 @@ Pre.propTypes = {
 
 const css = `
   & .comfy-pre {
-    border-radius: .8rem;
     margin: 0;
     padding: 1.6rem;
     font-size: 1.2rem;
