@@ -1,0 +1,222 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  line-height: 1;
+  border-radius: .4rem;
+  border: solid 1px;
+  padding: 0 1rem;
+  transition: border-color $base-transition-duration ease, background-color $base-transition-duration ease, box-shadow $base-transition-duration ease;
+  box-sizing: border-box;
+  font-weight: 500;
+  height: 3rem;
+  cursor: pointer;
+  user-select: none;
+
+  svg {
+    fill: currentColor;
+  }
+
+  .inner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inner-content svg {
+    margin-right: 0.4rem;
+  }
+
+  &:hover:not(:disabled) {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus:not(:active) {
+    @include focus-box-shadow();
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &.button--small .inner-content svg {
+    margin-right: .2rem;
+  }
+
+  &.button--block {
+    display: block;
+    width: 100%;
+  }
+
+  &.button--small {
+    height: 2.2rem;
+    padding: 0 0.6rem;
+    font-size: 1.3rem;
+  }
+
+  &.button--icon {
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+
+    .inner-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2rem;
+      width: 2rem;
+      overflow: hidden;
+    }
+
+    &.button--small {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
+
+    &.button--large {
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+  }
+
+  &.button--square {
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+
+    &.button--small {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
+  }
+
+  &.button--large {
+    height: 3.6rem;
+    font-size: 1.6rem;
+  }
+
+  &.button--circle {
+    border-radius: 10rem;
+  }
+
+  &.button--dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .inner-content {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding-right: 0.8rem;
+      line-height: 1.2;
+    }
+
+    &.button--small {
+      padding-right: .3rem;
+
+      .inner-content {
+        padding-right: .1rem;
+      }
+    }
+  }
+
+  .button-dropdown-icon {
+    width: 1rem;
+    height: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      margin-top: -.1rem;
+    }
+  }
+
+
+  /** PRIMARY **/
+  &.button--primary {
+    background-color: $color-primary;
+    color: #fff;
+    border: none;
+
+    &:hover:not(:disabled) {
+      background-color: darken($color-primary, 7%);
+    }
+
+    &:active:not(:disabled) {
+      background-color: darken($color-primary, 14%);
+    }
+  }
+
+
+  /** grey **/
+  &.button--grey {
+    background-color: $color-grey-25;
+    color: $color-grey-500;
+    border-color: $color-grey-100;
+
+    &:hover:not(:disabled) {
+      background-color: $color-grey-75;
+    }
+
+    &:active:not(:disabled) {
+      background-color: $color-grey-100;
+      border-color: $color-grey-200;
+    }
+  }
+
+  /** flat **/
+  &.button--flat {
+    border: none;
+    background-color: transparent;
+    color: $color-grey-500;
+
+    &:hover:not(:disabled) {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &:active:not(:disabled) {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+
+  &.button--flat-dark {
+    border: none;
+    background-color: transparent;
+    color: var(--color-grey-50);
+
+    &:hover:not(:disabled) {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:active:not(:disabled) {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+
+  &.button--grey-dark {
+    background-color: rgba(255,255,255,.1);
+    border-color: rgba(0,0,0,.4);
+    color: #fff;
+
+    &:hover:not(:disabled) {
+      background-color: rgba(255,255,255,.15);
+    }
+
+    &:active:not(:disabled) {
+      background-color: rgba(255,255,255,.2);
+    }
+  }
+}
+

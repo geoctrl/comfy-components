@@ -66,7 +66,10 @@ config.module = {
 
 config.plugins = [
   new IcosetWebpackPlugin({
-    preset: require('@icoset/preset-mdi'),
+    directory: path.resolve(
+      __dirname,
+      'node_modules/@fortawesome/fontawesome-pro/svgs'
+    ),
     icons,
   }),
   new HtmlWebpackPlugin({

@@ -13,7 +13,7 @@ export class Buttons extends Component {
               <Button action="primary">Primary</Button>
             </div>
             <div className="mb-sm">
-              <Button action="secondary">Secondary</Button>
+              <Button action="grey">Grey</Button>
             </div>
             <div className="mb-sm">
               <Button action="flat">Flat</Button>

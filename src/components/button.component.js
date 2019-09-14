@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
-import { Scoped, k, a } from 'kremling';
-import { oneOf, bool, string } from 'prop-types';
+import { a } from 'kremling';
+import { oneOf, bool, string, func, oneOfType, number, object } from 'prop-types';
+
+import { Icon } from './icon.component';
 
 export class Button extends Component {
   static propTypes = {
-    action: oneOf(['primary', 'secondary', 'flat']),
+    action: oneOf(['primary', 'grey', 'flat']),
+    block: bool,
+    circle: bool,
+    className: oneOfType([string, object]),
+    dropdown: bool,
+    icon: string,
+    large: bool,
+    onClick: func,
+    square: bool,
     small: bool,
+    tag: string,
 
     // other attributes
     autoFocus: bool,
@@ -17,151 +28,69 @@ export class Button extends Component {
     formNoValidate: bool,
     formTarget: oneOf(['_self', '_blank', '_parent', '_top']),
     name: string,
+    tabIndex: number,
     type: oneOf(['submit', 'reset', 'button']),
     value: string,
   };
 
+  static defaultProps = {
+    action: 'grey',
+    icon: '',
+  };
+
+  state = {
+    isFocused: false,
+  }
+  onFocus = () => {
+    this.setState({ isFocused: true });
+  }
+  onBlur = () => {
+    this.setState({ isFocused: false });
+  }
   render() {
     const {
+      action,
+      icon,
       children,
-      action = 'secondary',
-      className = '',
-      small = false,
+      block,
+      small,
+      large,
+      className,
+      dropdown,
+      circle,
+      square,
+      tabIndex,
       ...buttonProps
     } = this.props;
-
+    const { isFocused } = this.state;
     return (
-      <Scoped css={css}>
-        <button
-          className={
-            a(`button button__${action} ${className}`)
-              .m('button--small', small)
-          }
-          {...buttonProps}
-        >
-          {children}
-        </button>
-      </Scoped>
+      <button
+        tabIndex={tabIndex || 0}
+        style={{ zIndex: isFocused ? 1 : 0 }}
+        {...buttonProps}
+        className={a(`button button--${action} ${className || ""}`)
+          .m("button--icon", icon)
+          .m("button--block", block)
+          .m("button--small", small)
+          .m("button--large", large)
+          .m("button--dropdown", dropdown)
+          .m("button--circle", circle)
+          .m("button--square", square)}
+        onFocus={this.onFocus}
+        onBlur={this.onBlur}
+      >
+        {icon ? (
+          <span className="inner-icon">
+            <Icon name={icon} size={small ? 16 : large ? 24 : 20} />
+          </span>
+        ) : (
+          <span className="inner-content">{children}</span>
+        )}
+        {dropdown && (
+          <div className="button-dropdown-icon">
+            <Icon name="caret-down" size={13} />
+          </div>
+        )}
+      </button>
     );
-  }
-}
-
-const css = k`
-  .button {
-    position: relative;
-    height: 3.2rem;
-    border: none;
-    border-radius: $base-border-radius;
-    padding: 0 .8rem;
-    line-height: 1;
-    background: transparent;
-    transition: background $base-transition-duration ease;
-    font-weight: 500;
-    font-size: $base-font-size;
-
-    &::after {
-      content: '';
-      position: absolute;
-      border-radius: $base-border-radius;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border: solid .1rem;
-      background-color: transparent;
-      box-shadow: none;
-      transition: background-color $base-transition-duration ease, box-shadow $base-transition-duration ease;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      border-radius: $base-border-radius;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      box-shadow: none;
-      transition: box-shadow $base-transition-duration ease;
-    }
-
-    &:focus::before {
-      @include focus-box-shadow();
-    }
-
-    &:focus,
-    &:active {
-      outline: none;
-      box-shadow: none;
-    }
-
-    &:focus:active::before {
-      box-shadow: none;
-    }
-
-    &:active::after {
-      box-shadow: inset 0 .1rem .2rem .1rem rgba($color-grey-900, .4);
-      background-color: rgba($color-grey-900, .1);
-    }
-  }
-
-  .button--small {
-    height: 2.8rem;
-    line-height: 2.8rem;
-    padding: 0 .8rem;
-    font-size: 1.4rem;
-  }
-
-
-  /**
-   * PRIMARY
-   */
-  .button__primary {
-    background-color: $color-primary;
-    color: #fff;
-
-    &::after {
-      border-color: rgba($color-grey-900, .2);
-    }
-
-    &:hover {
-      background-color: darken($color-primary, 10%);
-    }
-  }
-
-  /**
-   * SECONDARY
-   */
-  .button__secondary {
-    background-color: $color-grey-25;
-    color: $color-grey-500;
-
-    &::after {
-      border-color: $color-grey-100;
-    }
-
-    &:focus::after {
-      border-color: $color-grey-300;
-    }
-
-    &:hover {
-      background-color: $color-grey-50;
-    }
-  }
-
-  /**
-   * FLAT
-   */
-  .button__flat {
-    background-color: transparent;
-    color: $color-grey-500;
-
-    &::after {
-      border: none;
-    }
-
-    &:hover {
-      background-color: $color-grey-50;
-    }
-  }
-`;
+  }}

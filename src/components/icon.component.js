@@ -1,27 +1,22 @@
 import React, { Component } from 'react';
-import { string, number } from 'prop-types';
-import { Scoped, k } from 'kremling';
+import { string, number, object, oneOfType } from 'prop-types';
 
 export class Icon extends Component {
   static propTypes = {
     name: string,
     size: number,
-    className: string,
+    className: oneOfType([string, object]),
+    fill: string,
   };
-
   render() {
-    const { name, size = 20, className } = this.props;
+    const { name, size = 20, fill, className } = this.props;
     return (
-      <Scoped css={css}>
-        <svg
-          className={`icon ${className || ''}`}
-          style={{ width: `${size / 10}rem`, height: `${size / 10}rem` }}
-        >
-          <use href={`#${name}`} xlinkHref={`#${name}`} />
-        </svg>
-      </Scoped>
+      <svg
+        className={`icon ${className || ''}`}
+        style={{ width: `${size / 10}rem`, height: `${size / 10}rem`, fill }}
+      >
+        <use href={`#${name}`} xlinkHref={`#${name}`} />
+      </svg>
     );
   }
 }
-
-const css = k``;

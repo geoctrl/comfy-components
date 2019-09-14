@@ -3,7 +3,7 @@ $list-padding: .8rem;
 .select-list {
   padding: $list-padding;
 
-  a, button {
+  a, button.button {
     display: block;
     width: 100%;
     border: none;
@@ -30,6 +30,9 @@ $list-padding: .8rem;
       @include focus-box-shadow();
     }
 
+    .inner-content {
+      justify-content: flex-start;
+    }
   }
 
 }

@@ -1,3 +1,4 @@
 module.exports = [
-  'check',
+  { 'times': 'regular/times.svg' },
+  { 'caret-down': 'solid/caret-down.svg' },
 ];

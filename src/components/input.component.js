@@ -16,6 +16,7 @@ export class Input extends Component {
     return (
       <Scoped css={css}>
         <div
+          style={{ zIndex: isFocused ? 1 : 0 }}
           className={
             a('input')
               .m('input--focus', isFocused)
@@ -35,17 +36,17 @@ export class Input extends Component {
 
 const css = k`
   .input {
-    display: inline-block;
+    display: block;
     border-radius: $base-border-radius;
-    width: 20rem;
+    flex-grow: 1;
 
     &.input--focus {
     }
   }
 
   .input__input {
-    height: 3.6rem;
-    line-height: 3.6rem;
+    height: 3rem;
+    line-height: 3rem;
     border-radius: $base-border-radius;
     font-size: $base-font-size;
     color: $color-grey-900;
@@ -60,7 +61,6 @@ const css = k`
     &:focus, &:active {
       box-shadow: none;
       outline: none;
-      border-color: $color-grey-300;
     }
 
     &:focus {
