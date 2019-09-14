@@ -1,23 +1,19 @@
-import React from 'react';
-import { Scoped } from 'kremling';
+import React, { Component } from 'react';
+import { Scoped, k } from 'kremling';
 
 import comfyCatImg from '../assets/comfy-cat.svg';
 import comfyLogoImg from '../assets/comfy-logo.svg';
 
-export function HomePage() {
-  return (
-    <Scoped css={css}>
-      <div className="wrapper">
-        home page
-      </div>
-    </Scoped>
-  );
+export class HomePage extends Component {
+  render() {
+    return (
+      <Scoped css={css}>
+        <div className="wrapper">
+          home page
+        </div>
+      </Scoped>
+    );
+  }
 }
 
-HomePage.propTypes = {};
-
-const css = `
-  & .wrapper {
-    background-color: var(--color-danger);
-  }
-`;
+const css = k``;

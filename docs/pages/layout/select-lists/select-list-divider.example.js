@@ -1,14 +1,12 @@
 import React from 'react';
 
-export default function SelectListDivider() {
-  return (
-    <div className="cf-card">
-      <div className="cf-list">
-        <button>Hitmontop</button>
-        <button>Simisear</button>
-        <div className="cf-list__divider" />
-        <button>Tauros</button>
-      </div>
+export default (
+  <div className="cf-card">
+    <div className="cf-select-list">
+      <button>Hitmontop</button>
+      <button>Simisear</button>
+      <div className="cf-select-list__divider" />
+      <button>Tauros</button>
     </div>
-  );
-}
+  </div>
+);

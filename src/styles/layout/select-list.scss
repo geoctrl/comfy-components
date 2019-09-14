@@ -1,6 +1,6 @@
 $list-padding: .8rem;
 
-.cf-list {
+.select-list {
   padding: $list-padding;
 
   a, button {
@@ -34,7 +34,7 @@ $list-padding: .8rem;
 
 }
 
-.cf-list__divider {
+.select-list__divider {
   border-bottom: solid .1rem $color-grey-100;
   padding-top: $list-padding;
   margin-bottom: $list-padding;

@@ -16,17 +16,41 @@ config.output = {
 config.mode = 'development';
 config.devtool = 'source-map';
 
+config.resolveLoader = {
+  alias: {
+    'doc-loader': path.join(__dirname, './doc-loader.js')
+  },
+};
+
 config.module = {
   rules: [
     {
-      test: /\.js$/,
+      test: /\.js/,
       exclude: /node_modules/,
-      use: 'babel-loader',
+      use: [
+        'babel-loader',
+        {
+          loader: 'kremling-inline-loader',
+          options: {
+            sass: {
+              data: `@import "${path.resolve(
+                __dirname,
+                'src/styles/variables.scss'
+              )}";`
+            },
+          },
+        },
+      ]
     },
     {
       test: /\.scss$/,
       exclude: /node_modules/,
-      use: ['style-loader', 'css-loader', 'fast-sass-loader'],
+      use: ['style-loader', 'css-loader', {
+        loader: 'sass-loader',
+        options: {
+          implementation: require("sass"),
+        },
+      }],
     },
     {
       test: /\.css$/,
