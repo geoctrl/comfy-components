@@ -60,28 +60,28 @@ const css = k`
 .radio {
   display: inline-flex;
   align-items: center;
-  padding-right: 1.4rem;
+  padding-right: 14rem;
   user-select: none;
   vertical-align: middle;
 
   &::before {
     display: inline-block;
     content: '';
-    height: 1.4rem;
-    width: 1.4rem;
-    border-radius: 1.4rem;
-    border: solid .2rem $color-grey-300;
-    margin-right: .6rem;
+    height: 14rem;
+    width: 14rem;
+    border-radius: 14rem;
+    border: solid 2rem var(--color-grey-300);
+    margin-right: 6rem;
     box-shadow: none;
-    transition: border $base-transition-duration ease, box-shadow $base-transition-duration ease;
+    transition: border $base-form-transition-duration ease, box-shadow $base-form-transition-duration ease;
   }
 
   &.radio--focus::before {
-    @include focus-box-shadow;
+    box-shadow: var(--input-focus-box-shadow);
   }
 
   &.radio--checked::before {
-    border: solid .5rem $color-primary;
+    border: solid 5rem var(--color-primary);
   }
 
   &.radio--block {

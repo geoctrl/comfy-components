@@ -1,0 +1,36 @@
+.container {
+  padding: 0 2.4rem;
+  width: 100%;
+
+  @media (min-width: $media4-width) {
+    padding: 0;
+    width: $media4-width - 48rem;
+    margin: 0 auto;
+  }
+}
+
+.container-fluid {
+  padding: 0 2.4rem;
+  width: 100%;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-header__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  padding: 2.4rem 0;
+}
+
+.page-header__actions {
+  display: flex;
+  align-items: center;
+
+  > * {
+    margin-left: 1.6rem;
+  }
+}

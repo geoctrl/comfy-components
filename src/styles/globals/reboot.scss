@@ -27,14 +27,18 @@ html {
   font-size: $root-font-size;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: $base-font-family;
-  background-color: $color-grey-10;
+  background-color: var(--color-page-background);
   font-size: $base-font-size;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
-  color: $base-font-color;
+  color: var(--color-text);
   text-align: left;
 }
 
@@ -135,14 +139,14 @@ sup {
 }
 
 a {
-  color: $color-primary;
+  color: var(--color-success);
   text-decoration: none;
   background-color: transparent;
   cursor: pointer;
 }
 
 a:hover {
-  color: $color-primary;
+  color: var(--color-success);
   text-decoration: underline;
 }
 
@@ -187,7 +191,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: $color-grey-500;
+  color: var(--color-grey-500);
   text-align: left;
   caption-side: bottom;
 }

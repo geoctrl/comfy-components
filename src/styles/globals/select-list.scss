@@ -1,0 +1,71 @@
+.select-list {
+  $select-list-padding: .6rem;
+  padding: $select-list-padding 0;
+
+  > a, > button {
+    padding: $select-list-padding 1.2rem;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: var(--color-grey-700);
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+      outline: none;
+      box-shadow: var(--input-focus-box-shadow);
+    }
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: #fff;
+    }
+
+    &.--active {
+      color: var(--color-primary);
+      font-weight: 500;
+      background-color: var(--color-grey-50);
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        border-left: solid .4rem var(--color-primary);
+      }
+
+      &:hover {
+        background-color: var(--color-primary);
+        color: #fff;
+      }
+    }
+
+    > .icon {
+      max-width: 2rem;
+      max-height: 2rem;
+      margin-right: 1.2rem;
+    }
+  }
+
+  > .divider {
+    border-bottom: solid .1rem var(--color-grey-100);
+    padding-top: $select-list-padding;
+    margin-bottom: $select-list-padding;
+  }
+
+  &.--large {
+    $select-list-padding: $select-list-padding * 1.6;
+    > a, > button {
+      font-size: 1.8rem;
+      padding: $select-list-padding 2rem;
+    }
+
+    > .divider {
+      padding-top: $select-list-padding;
+      margin-bottom: $select-list-padding;
+    }
+  }
+}

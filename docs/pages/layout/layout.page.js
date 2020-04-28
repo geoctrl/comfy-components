@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
-import { Cards } from './layout/cards/cards.page';
-import { SelectLists } from './layout/select-lists/select-lists.page';
+import { Cards } from './cards/cards.page';
+import { SelectLists } from './select-lists/select-lists.page';
 
 export class LayoutPage extends Component {
   render() {

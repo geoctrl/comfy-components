@@ -53,24 +53,22 @@ export class Checkbox extends Component {
 }
 
 const css = k`
-  $checkbox-size: $base-font-size;
-
   .checkbox {
     display: inline-flex;
     align-items: center;
-    padding-right: 1.6rem;
+    padding-right: 16rem;
     user-select: none;
     vertical-align: middle;
 
     .checkbox__box {
       display: inline-block;
-      height: $checkbox-size;
-      width: $checkbox-size;
+      height: var(--checkbox-size);
+      width: var(--checkbox-size);
       position: relative;
-      margin-right: .6rem;
+      margin-right: 6rem;
       border-radius: $base-border-radius;
       box-shadow: none;
-      transition: box-shadow $base-transition-duration ease, border $base-transition-duration ease;
+      transition: box-shadow $base-form-transition-duration ease, border $base-form-transition-duration ease;
 
       &::before {
         content: '';
@@ -80,25 +78,25 @@ const css = k`
         right: 0;
         bottom: 0;
         border-radius: $base-border-radius;
-        border: solid .2rem $color-grey-300;
-        transition: border $base-transition-duration ease;
+        border: solid 2rem var(--color-grey-300);
+        transition: border $base-form-transition-duration ease;
       }
     }
 
     &.checkbox--focus .checkbox__box::before {
-      border-color: $color-grey-500;
+      border-color: var(--color-grey-500);
     }
 
     &.checkbox--checked .checkbox__box {
       &::before {
-        border-width: .5rem;
-        border-color: $color-primary;
+        border-width: 5rem;
+        border-color: var(--color-primary);
       }
     }
 
     &.checkbox--focus {
       .checkbox__box {
-        @include focus-box-shadow();
+        box-shadow: var(--input-focus-box-shadow);
       }
     }
 

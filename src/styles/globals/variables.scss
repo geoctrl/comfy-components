@@ -1,0 +1,97 @@
+@import "mixins";
+
+$color-primary-100: #F0F4FE;
+$color-primary-200: #D4DEF8;
+$color-primary-300: #95AEED;
+$color-primary-400: #758CE0;
+$color-primary-500: #6175DE;
+$color-primary-600: #495DC6;
+$color-primary-700: #3547A4;
+$color-primary-800: #253586;
+$color-primary-900: #1F2C6D;
+
+$color-info-200: #E7FFFE;
+$color-info-300: #A8EEEB;
+$color-info-400: #6ED7D3;
+$color-info-500: #3CAEA3;
+$color-info-600: #2A9187;
+$color-info-700: #1B655E;
+$color-info-800: #124544;
+
+$color-success-200: #FFFCF4;
+$color-success-300: #A8EEC1;
+$color-success-400: #74D99F;
+$color-success-500: #38C172;
+$color-success-600: #259D58;
+$color-success-700: #197741;
+$color-success-800: #145239;
+
+$color-warning-200: #FFFCF4;
+$color-warning-300: #FDF3D7;
+$color-warning-400: #FAE29F;
+$color-warning-500: #F4CA64;
+$color-warning-600: #CAA53D;
+$color-warning-700: #8C6D1F;
+$color-warning-800: #5C4813;
+
+$color-danger-200: #FCE8E8;
+$color-danger-300: #F5AAAA;
+$color-danger-400: #E46464;
+$color-danger-500: #DC3030;
+$color-danger-600: #B82020;
+$color-danger-700: #891B1B;
+$color-danger-800: #891B1B;
+
+$color-grey-100: #F8F9FA;
+$color-grey-200: #E1E7EC;
+$color-grey-300: #D5DDE5;
+$color-grey-400: #CCD4DB;
+$color-grey-500: #AEBECD;
+$color-grey-600: #929FB1;
+$color-grey-700: #6E7A8A;
+$color-grey-800: #404B5A;
+$color-grey-900: #202833;
+
+
+$root-font-size: 6.25%;
+$base-font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$base-form-height: 36rem;
+$base-font-size: 14rem;
+$base-font-weight: 400;
+$base-line-height: 1.4;
+$base-border-radius: 6rem;
+$base-form-transition-duration: 100ms;
+$input-transition: border-color $base-form-transition-duration ease, background-color $base-form-transition-duration ease, box-shadow $base-form-transition-duration ease;
+
+$media1-width: 768rem;
+$media2-width: 896rem;
+$media3-width: 1024rem;
+$media4-width: 1152rem;
+$media5-width: 1280rem;
+$media6-width: 1408rem;
+$media7-width: 1536rem;
+
+
+:root {
+  --color-primary: #{$color-primary-500};
+  --color-primary-rgb: #{generateRgb($color-danger-500)};
+  --color-text: #{$color-grey-900};
+  --color-text-rgb: #{generateRgb($color-grey-900)};
+  --color-anchor: #{$color-primary-500};
+  --color-page-background: #{$color-grey-100};
+
+  // forms
+  --color-input-background: #{$color-grey-100};
+  --color-input-border: #{$color-grey-400};
+  --color-input-border-focus: #{$color-grey-500};
+  --color-input-label: #{$color-grey-900};
+
+  --box-shadow-1: 0 1rem 3rem rgba(0,0,0,0.1), 0 1rem 2rem rgba(0,0,0,0.12);
+  --box-shadow-2: 0 3rem 6rem rgba(0,0,0,0.1), 0 3rem 6rem rgba(0,0,0,0.11);
+  --box-shadow-3: 0 10rem 20rem rgba(0,0,0,0.17), 0 6rem 6rem rgba(0,0,0,0.11);
+  --box-shadow-4: 0 14rem 28rem rgba(0,0,0,0.13), 0 10rem 10rem rgba(0,0,0,0.10);
+  --box-shadow-5: 0 19rem 38rem rgba(0, 0, 0, 0.18), 0 15rem 12rem rgba(0,0,0,0.10);
+
+  --input-focus-box-shadow: 0 0 0 3rem rgba(var(--color-primary-rgb), .3);
+
+}

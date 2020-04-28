@@ -13,7 +13,7 @@ export class Icon extends Component {
     return (
       <svg
         className={`icon ${className || ''}`}
-        style={{ width: `${size / 10}rem`, height: `${size / 10}rem`, fill }}
+        style={{ width: `${size}rem`, height: `${size}rem`, fill }}
       >
         <use href={`#${name}`} xlinkHref={`#${name}`} />
       </svg>

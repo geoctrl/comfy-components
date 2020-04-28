@@ -10,7 +10,7 @@ export class Cards extends Component {
       <div>
         <h1 className="comfy-title">Cards</h1>
         <Preview
-          title=".cf-card"
+          title=".card"
           example={CardsExample}
           raw={CardsExampleRaw}
         >

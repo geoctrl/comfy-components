@@ -19,11 +19,11 @@ export class Preview extends Component {
         <h5><code>{title}</code></h5>
         {children}
         <div className="preview-wrapper">
-          <div className="preview-wrapper__example cf-card bs-1 p-md">
+          <div className="preview-wrapper__example">
             {example}
           </div>
           <div className="preview-wrapper__raw">
-            <div className="cf-card">
+            <div className="card">
               {pre}
             </div>
           </div>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Scoped, k } from 'kremling';
 import { Radio } from "../../../src/components/radio.component";
 import { Checkbox } from "../../../src/components/checkbox.component";
-import { Input } from "../../../src/components/input.component";
 import { Button } from "../../../src/components/button.component";
 
 export class Forms extends Component {
@@ -93,7 +92,6 @@ export class Forms extends Component {
           </Checkbox>
           <h1>Input</h1>
           <h3>Single</h3>
-          <Input />
           <Button action="primary">Test</Button>
         </div>
       </Scoped>

@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default (
-  <div className="cf-card">
-    <div className="cf-select-list">
+  <div className="card">
+    <div className="select-list">
       <button>Gastly</button>
       <button>Meowstic</button>
       <a href="#">Ferrothorn</a>

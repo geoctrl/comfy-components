@@ -3,15 +3,15 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 1.4rem;
+  font-size: 14rem;
   line-height: 1;
-  border-radius: .4rem;
-  border: solid 1px;
+  border-radius: 4rem;
+  border: solid 1rem;
   padding: 0 1rem;
-  transition: border-color $base-transition-duration ease, background-color $base-transition-duration ease, box-shadow $base-transition-duration ease;
+  transition: border-color $base-form-transition-duration ease, background-color $base-form-transition-duration ease, box-shadow $base-form-transition-duration ease;
   box-sizing: border-box;
   font-weight: 500;
-  height: 3rem;
+  height: $base-form-height;
   cursor: pointer;
   user-select: none;
 
@@ -26,7 +26,7 @@
   }
 
   .inner-content svg {
-    margin-right: 0.4rem;
+    margin-right: 4rem;
   }
 
   &:hover:not(:disabled) {
@@ -38,7 +38,7 @@
   }
 
   &:focus:not(:active) {
-    @include focus-box-shadow();
+    box-shadow: var(--input-focus-box-shadow);
   }
 
   &:disabled {
@@ -47,7 +47,7 @@
   }
 
   &.button--small .inner-content svg {
-    margin-right: .2rem;
+    margin-right: 2rem;
   }
 
   &.button--block {
@@ -56,9 +56,9 @@
   }
 
   &.button--small {
-    height: 2.2rem;
-    padding: 0 0.6rem;
-    font-size: 1.3rem;
+    height: 22rem;
+    padding: 0 6rem;
+    font-size: 13rem;
   }
 
   &.button--icon {
@@ -76,13 +76,13 @@
     }
 
     &.button--small {
-      width: 2.2rem;
-      height: 2.2rem;
+      width: 22rem;
+      height: 22rem;
     }
 
     &.button--large {
-      width: 3.6rem;
-      height: 3.6rem;
+      width: 36rem;
+      height: 36rem;
     }
   }
 
@@ -92,14 +92,14 @@
     padding: 0;
 
     &.button--small {
-      width: 2.2rem;
-      height: 2.2rem;
+      width: 22rem;
+      height: 22rem;
     }
   }
 
   &.button--large {
-    height: 3.6rem;
-    font-size: 1.6rem;
+    height: 36rem;
+    font-size: 16rem;
   }
 
   &.button--circle {
@@ -115,15 +115,15 @@
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      padding-right: 0.8rem;
+      padding-right: 8rem;
       line-height: 1.2;
     }
 
     &.button--small {
-      padding-right: .3rem;
+      padding-right: 3rem;
 
       .inner-content {
-        padding-right: .1rem;
+        padding-right: 1rem;
       }
     }
   }
@@ -137,40 +137,40 @@
     justify-content: center;
 
     svg {
-      margin-top: -.1rem;
+      margin-top: -1rem;
     }
   }
 
 
   /** PRIMARY **/
   &.button--primary {
-    background-color: $color-primary;
+    background-color: var(--color-primary);
     color: #fff;
     border: none;
 
     &:hover:not(:disabled) {
-      background-color: darken($color-primary, 7%);
+      background-color: var(--color-primary);
     }
 
     &:active:not(:disabled) {
-      background-color: darken($color-primary, 14%);
+      background-color: var(--color-primary),;
     }
   }
 
 
   /** grey **/
   &.button--grey {
-    background-color: $color-grey-25;
-    color: $color-grey-500;
-    border-color: $color-grey-100;
+    background-color: var(--color-grey-25);
+    color: var(--color-grey-500);
+    border-color: var(--color-grey-100);
 
     &:hover:not(:disabled) {
-      background-color: $color-grey-75;
+      background-color: var(--color-grey-75);
     }
 
     &:active:not(:disabled) {
-      background-color: $color-grey-100;
-      border-color: $color-grey-200;
+      background-color: var(--color-grey-100);
+      border-color: var(--color-grey-200);
     }
   }
 
@@ -178,7 +178,7 @@
   &.button--flat {
     border: none;
     background-color: transparent;
-    color: $color-grey-500;
+    color: var(--color-grey-500);
 
     &:hover:not(:disabled) {
       background-color: rgba(0, 0, 0, 0.1);

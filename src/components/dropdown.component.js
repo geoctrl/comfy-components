@@ -183,7 +183,7 @@ export class Dropdown extends Component {
           .m("dropdown-content--block", size === "block")}
         style={{
           maxHeight: contentHeight,
-          ...(!isNaN(size) ? { width: `${size / 10}rem` } : {}),
+          ...(!isNaN(size) ? { width: `${size}rem` } : {}),
           ...positionStyles,
         }}
       >

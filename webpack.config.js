@@ -35,7 +35,7 @@ config.module = {
             sass: {
               data: `@import "${path.resolve(
                 __dirname,
-                'src/styles/variables.scss'
+                'src/styles/globals/variables.scss'
               )}";`
             },
           },

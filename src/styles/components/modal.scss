@@ -36,7 +36,7 @@
 .modal__inner {
   background-color: #fff;
   border-radius: $base-border-radius;
-  box-shadow: $box-shadow-4;
+  box-shadow: var(--box-shadow-4);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -62,19 +62,19 @@
 .modal.modal--overlay > .modal__inner {
   width: auto;
   position: absolute;
-  top: 3.2rem;
-  left: 3.2rem;
-  right: 3.2rem;
-  bottom: 3.2rem;
+  top: 32rem;
+  left: 32rem;
+  right: 32rem;
+  bottom: 32rem;
 }
 
 .modal__header {
-  font-size: 1.8rem;
+  font-size: 18rem;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.6rem 1.6rem 1rem 1.6rem;
+  padding: 16rem 16rem 1rem 16rem;
 }
 
 .modal__head-close {
@@ -88,13 +88,13 @@
 }
 
 .modal__body {
-  padding: 0 1.6rem 1.6rem 1.6rem;
+  padding: 0 16rem 16rem 16rem;
   flex-grow: 1;
 }
 
 .modal__actions {
-  border-top: solid 1px $color-grey-100;
-  padding: 1.6rem;
+  border-top: solid 1px var(--color-grey-100);
+  padding: 16rem;
   text-align: right;
 
   button {

@@ -28,7 +28,7 @@ export class Header extends Component {
 const css = k`
   .header {
     height: 7rem;
-    padding: 0 3.2rem;
+    padding: 0 32rem;
     background-color: var(--color-danger);
   }
   

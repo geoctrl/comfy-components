@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
-import { Buttons } from './components/buttons';
-import { Forms } from "./components/forms";
+import { Buttons } from './buttons';
+import { Forms } from "./forms";
 
 export class ComponentsPage extends Component {
   render() {

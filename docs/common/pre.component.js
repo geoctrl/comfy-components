@@ -17,15 +17,15 @@ export class Pre extends Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    const { content, children } = this.props;
-    if (prevProps.content !== content) {
+    if (prevState.content !== this.state.content) {
       this.setState({
-        content: Prism.highlight(children, Prism.languages.javascript, 'javascript'),
+        content: Prism.highlight(this.props.children, Prism.languages.javascript, 'javascript'),
       });
     }
   }
 
   render() {
+    const { content } = this.state;
     return (
       <Scoped css={css}>
         <pre

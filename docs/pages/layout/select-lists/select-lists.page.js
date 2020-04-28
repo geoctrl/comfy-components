@@ -17,18 +17,18 @@ export class SelectLists extends Component {
           <h1 className="comfy-title">Select Lists</h1>
 
           <Preview
-            title=".cf-select-list"
+            title=".select-list"
             example={SelectListExample}
             raw={selectListExampleRaw}
           >
             <p>
               Build a simple select list of buttons and/or links.<br />
-              These styles work great using the <code>.cf-card</code> class.
+              These styles work great using the <code>.card</code> class.
             </p>
           </Preview>
 
           <Preview
-            title=".cf-select-list__divider"
+            title=".select-list__divider"
             example={SelectListDivider}
             raw={selectListDividerRaw}
           >

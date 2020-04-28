@@ -1,11 +1,11 @@
 import React from 'react';
 
 export default (
-  <div className="cf-card">
-    <div className="cf-select-list">
+  <div className="card">
+    <div className="select-list">
       <button>Hitmontop</button>
       <button>Simisear</button>
-      <div className="cf-select-list__divider" />
+      <div className="select-list__divider" />
       <button>Tauros</button>
     </div>
   </div>
