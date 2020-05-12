@@ -1,4 +1,4 @@
 module.exports = [
-  { 'times': 'regular/times.svg' },
-  { 'caret-down': 'solid/caret-down.svg' },
+  { 'times': 'tea-cup.svg' },
+  { 'caret-down': 'worldwide-delivery.svg' },
 ];

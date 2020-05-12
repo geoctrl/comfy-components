@@ -17,6 +17,7 @@ export class Dropdown extends Component {
     className: oneOfType([object, string]),
     content: func.isRequired,
     contentHeight: oneOfType([string, number]),
+    contentWidth: oneOfType([number, oneOf(["sm", "md", "lg", "block"])]),
     control: func,
     cover: bool,
     fixedContent: bool,
@@ -25,7 +26,6 @@ export class Dropdown extends Component {
     lean: oneOf(["right", "left"]),
     onClose: func,
     onOpen: func,
-    size: oneOfType([number, oneOf(["sm", "md", "lg", "block"])]),
     trigger: func.isRequired,
   }
 
@@ -34,7 +34,7 @@ export class Dropdown extends Component {
     contentHeight: "auto",
     hideContent: false,
     lean: "right",
-    size: "sm",
+    contentWidth: "sm",
   }
 
   state = {
@@ -102,13 +102,13 @@ export class Dropdown extends Component {
   }
 
   render() {
-    const { trigger, inline, fixedContent, className, size } = this.props;
+    const { trigger, inline, fixedContent, className, contentWidth } = this.props;
     const { isOpen } = this.state;
     return (
       <div
         className={
           a(`dropdown ${className || ''}`)
-            .m('dropdown--block', size === 'block')
+            .m('dropdown--block', contentWidth === 'block')
             .m("dropdown--inline", inline)
         }
         ref={this.dropdownEl}
@@ -117,7 +117,7 @@ export class Dropdown extends Component {
           ref={this.triggerEl}
           className={
             a('dropdown-trigger')
-              .m('dropdown-trigger--block', size === 'block')
+              .m('dropdown-trigger--block', contentWidth === 'block')
           }
           onClick={this.toggle}
         >
@@ -134,7 +134,7 @@ export class Dropdown extends Component {
     const {
       content,
       lean,
-      size,
+      contentWidth,
       contentHeight,
       fixedContent,
       cover,
@@ -178,12 +178,12 @@ export class Dropdown extends Component {
           .m("dropdown-content--cover", !fixedContent && cover)
           .m("dropdown-content--lean-right", lean === "right")
           .m("dropdown-content--lean-left", lean === "left")
-          .m("dropdown-content--md", size === "md")
-          .m("dropdown-content--lg", size === "lg")
-          .m("dropdown-content--block", size === "block")}
+          .m("dropdown-content--md", contentWidth === "md")
+          .m("dropdown-content--lg", contentWidth === "lg")
+          .m("dropdown-content--block", contentWidth === "block")}
         style={{
           maxHeight: contentHeight,
-          ...(!isNaN(size) ? { width: `${size}rem` } : {}),
+          ...(!isNaN(contentWidth) ? { width: `${contentWidth}rem` } : {}),
           ...positionStyles,
         }}
       >

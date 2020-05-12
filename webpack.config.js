@@ -68,7 +68,7 @@ config.plugins = [
   new IcosetWebpackPlugin({
     directory: path.resolve(
       __dirname,
-      'node_modules/@fortawesome/fontawesome-pro/svgs'
+      'node_modules/icons-hand-drawn/icons'
     ),
     icons,
   }),
